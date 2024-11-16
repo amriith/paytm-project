@@ -3,7 +3,7 @@ const mongoose= require ("mongoose");
 mongoose.connect('mongodb://localhost:27017/paytm');
 
 
-const userSchema = mongoose.schema({
+const userSchema = mongoose.Schema({
 
     username : String,
     password : String,
@@ -12,16 +12,16 @@ const userSchema = mongoose.schema({
 
 })
 
-const accountSchema = new mongoose.schema({
+const accountSchema = new mongoose.Schema({
 
     userId: {
-        type: mongoose.Schemas.Type.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
         required:true
         
     },
     balance: {
-         type:number,
+         type:Number,
          required:true
     }
 })
