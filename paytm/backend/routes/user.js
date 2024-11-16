@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken"); // Import jsonwebtoken
 const router = express.Router();
 const { User } = require("../db");
 const { Account } = require("../db");
-const { JWT_SECRET } = require("../config"); // Ensure JWT_SECRET is correctly exported
+const { JWT_SECRET } = require("../config"); 
 const authMiddleware = require("../middleware");
 
 const signupBody = zod.object({
