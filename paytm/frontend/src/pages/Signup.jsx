@@ -5,6 +5,8 @@ import { SubHeading } from "../components/SubHeading"
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { PasswordInput } from "../components/PasswordInput";
+import { Button } from "../components/Button";
+import { BottomWarning } from "../components/BottomWarning";
 
 
 
@@ -25,6 +27,8 @@ return  <div className="bg-slate-300 h-screen flex justify-center">
 <InputBox onChange={ e=> {setLastName(e.target.value)}} placeholder="Cena" label={"Last Name"}  />
 <InputBox onChange={ e => {setEmail(e.target.value)}} placeholder="xyz@gmail.com" label={"Email Id"} /> 
 <PasswordInput onChange={ e=> {setPassword(e.target.value)}} placeholder="1234"  label={"Password"}/>
+<Button label={"Sign Up"}/> 
+<BottomWarning label={"Already have an account?"}  buttonText={"Sign In"} to={"/signin"}/>   
 </div>
 </div>
 </div>
