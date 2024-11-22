@@ -15,7 +15,7 @@ export const Users = () => {
             <input type="text" placeholder="Search users..." className="w-full px-2 py-1 border rounded border-slate-200"></input>
         </div>
         <div>
-            {users.map (user => <Users user ={user} /> ) }
+            {users.map (user => <User user ={user} /> ) }
         </div>
         </>
 }
@@ -28,7 +28,7 @@ function User({user}) {
                     {user.firstName[0]}
                 </div>
             </div>
-            <div className="flex flex-col justify-center h-ful">
+            <div className="flex flex-col justify-center h-full">
                 <div>
                     {user.firstName} {user.lastName}
                 </div>
