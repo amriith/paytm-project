@@ -13,7 +13,7 @@ import { BottomWarning } from "../components/BottomWarning";
 export const Signup = () => {
 const [firstName, setFirstName] = useState("");
 const [lastName, setLastName]  = useState(" ");
-const[email, setEmail] = useState("");
+const[username, setUserName] = useState("");
 const [password, setPassword] = useState("");
 const navigate = useNavigate();
 
@@ -25,9 +25,20 @@ return  <div className="bg-slate-300 h-screen flex justify-center">
 <SubHeading label={"Enter Your Information to Create an Account" } /> 
 <InputBox onChange={ e=> {setFirstName(e.target.value)}}  placeholder="Jhon" label={"First Name"} /> 
 <InputBox onChange={ e=> {setLastName(e.target.value)}} placeholder="Cena" label={"Last Name"}  />
-<InputBox onChange={ e => {setEmail(e.target.value)}} placeholder="xyz@gmail.com" label={"Email Id"} /> 
+<InputBox onChange={ e => {setUserName(e.target.value)}} placeholder="xyz@gmail.com" label={"Email Id"} /> 
 <PasswordInput onChange={ e=> {setPassword(e.target.value)}} placeholder="1234"  label={"Password"}/>
-<Button label={"Sign Up"}/> 
+<Button onClick={async () => {
+
+  const response=  await axios.post("http://localhost:3000/api/v1/user/signup",{
+   firstName,
+   lastName,
+   username,
+   password
+  });
+localStorage.setItem("token", response.data.token) 
+navigate("/dashboard")
+}}
+label={"Sign Up"} /> 
 <BottomWarning label={"Already have an account?"}  buttonText={"Sign In"} to={"/signin"}/>   
 </div>
 </div>
