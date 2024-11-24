@@ -7,7 +7,7 @@ import { Button } from "../components/Button";
 import { BottomWarning } from "../components/BottomWarning";
 
 export const Signin = () => {
-    const [userName, setUserName] = useState("");
+    const [username, setUsername] = useState("");
     const [password,setPassword] = useState("");
 
 
