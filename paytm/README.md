@@ -62,7 +62,7 @@ Each page offers specific functionalities to the user.
 
 #### **Clone the repository:**
 ```bash
-git clone https://github.com/yourusername/payments-app.git
+git clone https://github.com/amriith/payments-app.git
 cd payments-app
 
 
@@ -80,7 +80,7 @@ Make sure you have the following installed:
 
 #### **Clone the repository:**
 
-git clone https://github.com/yourusername/payments-app.git
+git clone https://github.com/amriith/payments-app.git
 cd payments-app
 Install backend dependencies:
 cd backend
