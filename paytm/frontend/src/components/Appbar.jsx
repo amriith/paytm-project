@@ -1,7 +1,7 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { jwtDecode } from 'jwt-decode';
 export const Appbar = () => {
-    const [name, setName] = ("GUEST");
+    const [name, setName] = useState("GUEST");
     
 
     useEffect(() => {
